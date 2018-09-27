@@ -1,0 +1,41 @@
+
+.flexContainer {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
+
+.box1 {
+    
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+
+.box2 {
+    
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+}
+
+
+.box3 {
+    
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
