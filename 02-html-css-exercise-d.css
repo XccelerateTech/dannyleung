@@ -1,0 +1,32 @@
+#container {
+    width: 600px;
+    height: 100px; 
+}
+
+#container2 {
+    width: 350px;
+    height: 100px; 
+}
+div {
+    width: 100px;
+    height: 100px;
+}
+
+
+.box1 {
+    float: left;
+    background-color: blue;
+}
+
+
+.box2 {
+    float: right;
+    background-color: green;
+}
+
+
+.box3 {
+    float: right;
+    background-color: red;
+}
+
