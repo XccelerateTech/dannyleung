@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.topHalf {
+    display: grid;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./flowershop/flowershop.jpg');
+    background-repeat: no-repeat; 
+    max-width: 1280px;
+    height: 720px;
+    grid-template-rows: 35% 1fr 2fr;
+    align-content: center;
+  
+  }
+  
+  .box {
+    width: 1280px;
+  }
+  
+  .b {
+    font-family: Arial;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+  }
+  
+  .c {
+    font-family: Arial;
+    color: white;
+    font-size: 14px;  
+    text-align: center;
+  }
+    h2 {
+        background-color: green;
+        border-radius: 10px;
+        width: 150px;
+      }
+
+
+.bottomHalf {
+  background-color: rgb(212, 241, 179);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-width: 500px;
+  max-width: 1280px;
+  max-height: 400px;
+  margin: 0;
+}
