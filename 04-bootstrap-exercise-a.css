@@ -1,0 +1,96 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section1 {
+    text-align: center;
+    background-image: url('./04/header.jpg');
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: rgba(240,95,64,.9);
+    font-size: 16px;
+
+}
+
+h3 {
+    color: white;
+    font-size: 14px;
+}
+
+.section1text h3 {
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}
+
+.section2 {
+    color: white;
+    font-size: 14px;
+    background-color: rgba(240,95,64,.9);
+    text-align: center;
+
+}
+
+.section3 {
+    text-align: center;
+}
+
+.sec4pic1:before {
+    background: none;
+}
+
+
+.sec4pic1:hover:before {
+    background-color: rgba(240,95,64,.9);
+    background: rgba(240,95,64,.9);
+    transition: all .3s linear;
+    }
+
+
+.footer {
+    background-color: gray;
+    color: black;
+}
+
+
+
+
+.image-holder {
+    height: cover;
+    width: cover;
+    position: relative; 
+  }    
+  .image-holder:hover:before {
+    content: "testing";
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(240,95,64,.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .image-holder:before { 
+    background: none;
+  }
+
+  .section4 .image-holder .pictext {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+              
