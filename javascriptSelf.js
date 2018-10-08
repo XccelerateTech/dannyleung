@@ -676,3 +676,169 @@ drumkit.bass(); //when you run drumkit.bass() it will add one to the drumbeat --
 // PROTOTYPE - the proto-object that is shared by all its instances
 // INSTANCE - represent each individual piece of Data
 // OBJECT - a synonym with instance
+
+------------------------------------
+
+CompositionEvent - only part of the 
+
+class BaseFlying {
+    constructor(type){
+        this.type = type;
+    }
+    burrow() {
+        console.log('A ${this.type} can burrow')
+    }
+}
+
+class BaseFlying {
+    constructor(type){
+        this.type = type;
+    }
+    burrow() {
+        console.log('A ${this.type} can fly')
+    }
+}
+
+class BaseFeed {
+    constructor(type){
+        this.type = type;
+    }
+    burrow() {
+        console.log('A ${this.type} can milk')
+    }
+}
+
+
+class partthis.flyer = new BaseFlying {
+    var pelican = new Pelican ();
+    pelican.fly();
+    pelican.lay();
+}
+
+class Pelican {
+    constructor(){
+        this.flyer = new BaseFlying('Pelican')
+        this.lay = new BaseLaying('Pelican')
+    }
+}
+
+
+var pelican = new Pelican ();
+pelican.fly();
+pelican.lay();
+
+
+----------------------------
+
+day 08
+
+object-oriented programming
+interaction with objects
+
+difference between class and object
+class is template which objects is substantiated
+
+What is a constructor:
+a function that gets automatically called when you substantiate the object in a class
+every class should have a constructor
+to initialize things
+
+------------------------------
+Day 08 AJAX & DOM & EventSource
+
+Asynchronous: multi-thread operations: example:
+
+Synchronous: works well but takes a long time
+
+in programming: read/writing from database takes a very long time
+
+looping is synchromus
+
+AJAXShrot for of Asynchronous Javascript & XMLHttpRequestS
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+AJAX in Action
+
+var http= new XMLHttpRequest();
+http.open("GET", "data/file.json")
+
+http.onreadystatechange = function() {
+    if(http.readyState != XMLRequest.DONE) {
+        return;
+    } else if(http.status == 200) {
+        console.log(http.responseText);
+    } else{
+        console.log('error occurred' + http.status');
+    }
+}
+
+// onreadystatechange should be before http.send()
+http.send();
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HTTP Methods
+GET - to get something from Server (semantically)
+POST - to create something new in Server
+PUT - To create or update something in Server
+DELETE - to delete something in Server
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+AJAX http.readyState
+1. XMLHttpRequest.UNSENT == 0
+2. XMLHttpRequest.OPENED == 1
+3. XMLHttpRequest.HEADERS_RECEIVED == 2
+4. XMLHttpRequest.LOADING == 3
+5. XMLHttpRequest.DONE == 4
+
+AJAX in Action (orders)
+
+var http = new XMPHttpRequest();
+
+console.log("Step 1")
+http.open("GET", "/data/file.json")
+console.log("Step 2");
+http.onreadystatechange = function() {
+    console.log("Step 5")
+    if (http.readyState != XMLHttpRequest.DONE) {
+        return;
+    } else if(http.status == 200) {
+        console.log("Step 6")
+        console.log(http.responseText);
+    } else {
+        console.log('error occurred' + http.status);
+    }
+}
+console.log("Step 3");
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+JSON
+- Shorthand for Javascript Object Notation
+- Natively supported in Javascript
+
+                        Javascript Object
+ JSON.stringify()  (Count clockwise circle)  JSON.parse()
+                        JSON String
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
