@@ -1,0 +1,38 @@
+<!-- 
+In your JS file, copy the code in the AJAX calls section. Specifically, create a new XMLHttpRequest(), copy the code for http.onreadystatechange, call the http.open and http.send. You can also consider writing this JS script inside the html file.
+Load up your http-server as explained in the http-server section and you should be able to access the data when you browse http://127.0.0.1:8080/data.json
+If you find it difficult to load the server at the beginning, you can consider using atom live server
+Remember to do JSON.parse() if you want to print out the JSON file data as an object. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 08 - Exercise A</title>
+  </head>
+  <body>
+    
+    <script src="js/async.js">
+        
+    var http = new XMLHttpRequest();
+    http.open('GET', '/08-AJAX&JSON-exercise-a.json');
+
+    http.onreadystatechange = function() {
+        if (http.readyState != XMLRequest.DONE) {
+            return;
+        } else if (http.status == 200) {
+// where to put this code?     JSON.parse();
+            console.log(JSON.parse(http.responseText));
+        } else {
+            console.log('ERROR:' + http.status);
+        }
+    }
+
+    http.send();
+    
+    </script>
+  </body>
+</html>
+

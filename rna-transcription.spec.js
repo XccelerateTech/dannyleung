@@ -1,4 +1,4 @@
-var DnaTranscriber = require('./rna-transcription');
+var DnaTranscriber = require('./exercisimGroupExercise01');
 var dnaTranscriber = new DnaTranscriber();
 
 describe('toRna()', function () {

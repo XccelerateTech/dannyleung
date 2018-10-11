@@ -1,0 +1,8 @@
+Exercise G
+Given that x = 8 and y = 3. Answer the following:
+x==y  // false
+Q2: x && y < 10  // true
+Q3: x || y =< 8  // true
+Q4: y === '3'  // false
+Q5: !(x == 5)  // true
+

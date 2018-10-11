@@ -1,0 +1,132 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header id='header'>
+            <h1>Contacts</h1>
+        </header>
+        <div id="content">
+            <section class="sections" id="new-contact">
+                <h1>Create New Contact</h1>
+                <form id="form1">
+                    <div id="row-name">
+                        <input type='text' name="name" placeholder="Name"/>
+                    </div>
+                    <div id="row-phone">
+                        <input type='text' name="phone" placeholder="Telephone Number"/>
+                    </div>
+                    <div id="row-email">
+                        <input type='text' name="email" placeholder="Email"/>
+                    </div>
+                    <div id="row-submit">
+                        <input type="submit" value="submit"/>
+                    </div>
+                </form>
+            </section>
+            <section class="sections" id="contact-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telephone Number</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row">
+                            <td>Sam</td>
+                            <td>123456789</td>
+                            <td>sam@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Tom</td>
+                            <td>987654321</td>
+                            <td>tom@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Nadim</td>
+                            <td>54678292</td>
+                            <td>nadim@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <br><br><br>
+
+Day 09 - Jquery Intro and Selector<br><br>
+
+Exercise A:
+<br>
+<br>
+DO: Select the input field Telephone Number.<br>
+ANS: <strong>$('input[name="phone"]')</strong><br><br>
+
+
+DO: Select the second row of the contact list.<br>
+ANS (given by Sam): <strong>$("tbody tr:nth-child(2)")</strong>
+<br>
+<br>
+DO: Select all of the section tag in the page.<br>
+ANS: <strong>$('section')</strong><br>
+<br>
+<br>
+DO: Select the input field by the value of the placeholder.<br>
+ANS: <br>
+
+        <footer>
+        </footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.js"></script>
+</body>
+</html>
+
+<!--
+Day 09 - Jquery Intro and Selector<br><br>
+
+Exercise A:
+<br>
+<br>
+DO: Select the input field Telephone Number.<br>
+ANS: <strong>$('input[name="phone"]')</strong><br><br>
+
+
+DO: Select the second row of the contact list.<br>
+ANS (given by Sam): <strong>$("tbody tr:nth-child(2)")</strong>
+<br>
+<br>
+DO: Select all of the section tag in the page.<br>
+ANS: 
+
+$('section[class="sections"]') <== only first section
+
+
+<body>
+
+        <div id="content">
+            <section class="sections" id="new-contact">
+            <section class="sections" id="contact-list">
+
+
+<br>
+<br>
+
+
+
+
+<div id="row-phone">
+        <input type='text' name="phone" placeholder="Telephone Number"/>
+    </div>
+
+-->
+
+$('#row-submit').append('<input type="reset" value="clear" id="clear-input" class="cear"/>)
+$('#header').html(`<h1>Spam Call</h1>`);
+$('#contact-list table').css('color', 'red');
+<script src="blahblahblah.js"></script>
+
+
+

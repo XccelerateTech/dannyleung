@@ -25,3 +25,6 @@ class DnaTranscriber {
 }
 
 module.exports = DnaTranscriber;
+
+
+// jasmine rna-transcription.spec.js

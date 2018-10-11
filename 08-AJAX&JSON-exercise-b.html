@@ -1,0 +1,38 @@
+<!-- Using XMLHttpRequest make requests to this countries API.   
+    Write a function called ‘informMe()’ that takes three parameters, ‘endpoint’ , ‘value’ and ‘callback’.   
+    Endpoint is the api endpoint (country, capital etc).   
+    Value is the input value (country name, capital name).   
+    The function should return the JSON object with the relevant information through the callback. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 08 - Exercise B</title>
+    </head>
+<body>
+        Day 08 - Exercise B
+<script type="text/javascript">
+
+// create the function (takes three input parameters)
+function tellMeNow (endpoint, value, callback) {
+    let http = new XMLHttpRequest();
+    
+    http.open('GET', `https://restcountries.eu/rest/v2/${endpoint}/${capital}.html`); // target the fileyou want to GET
+
+    http.onreadystatechange = function() { //handle error and success
+        if (http.readyState != XMLRequest.DONE) {return;} 
+        else if (http.status == 200) {console.log(JSON.parse(http.responseText));} // get data into the dom
+        else {console.log('ERROR:' + http.status);} // tell user error
+    }
+}
+
+tellMeNow('region', 'europe', function(callback) {
+    (console.log(JSON.parse(callback)));  // can replace with just (JSON.parse(callback))
+}
+
+
+</script>
+</body>
+</html>

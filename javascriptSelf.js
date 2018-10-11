@@ -798,7 +798,7 @@ AJAX in Action (orders)
 var http = new XMPHttpRequest();
 
 console.log("Step 1")
-http.open("GET", "/data/file.json")
+http.open("GET", "../dannyleung/data.json")
 console.log("Step 2");
 http.onreadystatechange = function() {
     console.log("Step 5")
@@ -825,6 +825,36 @@ JSON
                         JSON String
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+var http= new XMLHttpRequest();
+http.open("GET", "data/file.json")
+
+http.onreadystatechange = function() {
+    if(http.readyState != XMLRequest.DONE) {
+        return;
+    } else if(http.status == 200) {
+        console.log(JSON.parse(http.responseText));
+    } else{
+        console.log('error occurred' + http.status);
+    }
+}
+
+// onreadystatechange should be before http.send()
+http.send();
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Day 08 - Exercise A</title>
+  </head>
+  <body>
+    
+    <script type='test'>
 
 
 
@@ -832,13 +862,139 @@ JSON
 
 
 
+    </script>
+  </body>
+</html>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DAY 09
+
+Binding Event Handler
+- Event Handler is a function that is called when an event happens
+var elem = document.getElementById('title');
+elem.onclick = function() {
+    alert (
+    )
+}
+
+// slide 2
+
+Accessing Information about the Event
+var para = document.getElemtnetsByTagName('p');
+for (var i=0; i < para.length; i++) {
+    para[i].addEventListener('click', function(e){
+        console.log('I was clicked' + e.target);
+    });
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DAY 09 JQuery / DOM 
+
+JQuery
+- like bootstrap - a library
+
+JQuery Selector
+$('#id')
+$('XXX')
+
+
+Exercise A2
+$("tbody tr:nth-child(2)")
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Day 11 - JQuery AJAX
 
 
 
+(((((in JS file)))))
+
+$(function()){
+    $.ajax({
+        url: "data.json"
+        // beforeSend:function(xhr){
+        //     console.log('getting data')
+        // },
+        type: 'GET',
+    }).done(function(data){
+        console.log('I will run if AJAX worked')
+        console.log(data);
+    }).fail(function(error){
+        console.log('There wan an error: ' + error )
+    }).always(function(data){
+        console.log('I am going to run regardless.')
+
+    });
+
+}
+
+(((((((deferred JQuery)))))))
+
+let deferred1 = $.get("/data.json");
+let deferred2 - $.get("/people.json");
+
+deferred1.done(function(){
+    console.log('Deferred 1 finished')
+});
+deferred2.done(function(){
+    console.log('Deferred 2 finished')
+});
+
+let combineAction = $.when(deferred1, deferred2).done(function(disney, loser){
+    console.log('Wow both actions are done.')
+    console.log(disney);
+    console.log(loser);
+});
 
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DAY 11 - Sunset Sunrise API
+
+$(function(){
+    @('#form').sumbit(function(input){
+        input.preventDefault();
+
+        let long=$('input[name=lng]').val();
+        let lat=$('input[name=lat]').val();
+
+        $.ajax(`https://api.sunrise-sunset.org/json?lat=${lat}0&lng=${long}&formatted=0`).done(function(data){
+
+        console.log(data)
+
+        let sunrise = new Date(date.results.sunrise);
+        let sunset = new Date(date.results.sunrise);
+
+        console.log('Sunrise is at : ' + sunrise)
+        console.log('Sunet is at : ' + sunet)
+        
+        $('#times').append
+        })
+
+    })
+})
 
 
+(((((( HTML ))))))
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DAY 11 - SUNRISE SUNSET</title>
+    </head>
+    <body>
+
+<form id='form' action='' method='post'>
+    <input type='text' name="lat" placeholder="latitude" value='22.25' required>
+    <input type='text' name="lng" placeholder="longitude" value='14.224534' required>
+    <input submit
 
 
+    </body>
+</html>
